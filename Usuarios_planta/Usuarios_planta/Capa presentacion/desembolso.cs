@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Usuarios_planta.Formularios;
 using FontAwesome.Sharp; // libreria para utilizar los iconbutton y los iconos
-
+using Usuarios_planta.Capa_presentacion;
 
 namespace Usuarios_planta
 {
@@ -117,6 +117,11 @@ namespace Usuarios_planta
             labelInicio.Text = BtnReportes.Text;
             icon2.IconChar = BtnReportes.IconChar;
             icon2.IconColor = BtnReportes.IconColor;
+        }
+
+        private void BtnReportes_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new horarios());
         }
     }
 }

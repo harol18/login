@@ -81,6 +81,7 @@
             this.BtnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnReportes.UseVisualStyleBackColor = true;
+            this.BtnReportes.Click += new System.EventHandler(this.BtnReportes_Click);
             this.BtnReportes.MouseHover += new System.EventHandler(this.BtnReportes_MouseHover);
             // 
             // Btnlogin
@@ -163,7 +164,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(131, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(658, 55);
+            this.panelTitulo.Size = new System.Drawing.Size(745, 55);
             this.panelTitulo.TabIndex = 1;
             // 
             // labelInicio
@@ -196,14 +197,14 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(131, 55);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(658, 464);
+            this.panelContenedor.Size = new System.Drawing.Size(745, 464);
             this.panelContenedor.TabIndex = 2;
             // 
             // desembolso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 519);
+            this.ClientSize = new System.Drawing.Size(876, 519);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelSideMenu);

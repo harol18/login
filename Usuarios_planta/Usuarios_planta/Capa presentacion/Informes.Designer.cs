@@ -84,6 +84,7 @@
             // Btnguardar
             // 
             this.Btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
+            this.Btnguardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btnguardar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.Btnguardar.Font = new System.Drawing.Font("Segoe UI Emoji", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

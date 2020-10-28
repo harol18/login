@@ -16,8 +16,8 @@ namespace Usuarios_planta
 {
     class Comandos
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;Uid=root;password=Indr42020$;database=dblibranza;port=3306;persistsecurityinfo=True;");
-        //MySqlConnection con = new MySqlConnection("server=82.2.121.99;Uid=userapp;password=userapp;database=dblibranza;port=3306;persistsecurityinfo=True;");
+        MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
+       
 
         public void Entrada(TextBox Txtidentificacion, TextBox TxtNombre, TextBox TxtEtapa, Label lblfecha_actual, Label lblHora, TextBox Txtobservaciones)
         {
@@ -180,6 +180,29 @@ namespace Usuarios_planta
             finally
             {
                 con.Close();
+            }
+        }
+
+        public void Informe_horario(DataGridView dgv_informes, DateTimePicker dtpinicio, DateTimePicker dtpfinal)
+        {
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                MySqlCommand cmd = new MySqlCommand("Informe_horario", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@_fecha_inicio", dtpinicio.Text);
+                cmd.Parameters.AddWithValue("@_fecha_final", dtpfinal.Text);
+                MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
+                registro.Fill(dt);
+                dgv_informes.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", ex.ToString());
+                con.Close();
+                MessageBox.Show("Conexion cerrada", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

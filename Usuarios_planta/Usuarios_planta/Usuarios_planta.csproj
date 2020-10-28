@@ -68,6 +68,12 @@
     <Compile Include="Capa presentacion\desembolso.Designer.cs">
       <DependentUpon>desembolso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Capa presentacion\horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa presentacion\horarios.Designer.cs">
+      <DependentUpon>horarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Capa presentacion\Informes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Capa presentacion\desembolso.resx">
       <DependentUpon>desembolso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa presentacion\horarios.resx">
+      <DependentUpon>horarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa presentacion\Informes.resx">
       <DependentUpon>Informes.cs</DependentUpon>
