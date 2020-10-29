@@ -16,6 +16,8 @@ namespace Usuarios_planta.Capa_presentacion
     {
 
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
+
+
         Comandos cmds = new Comandos();
 
 
@@ -26,7 +28,7 @@ namespace Usuarios_planta.Capa_presentacion
 
         private void Btn_busqueda_Click(object sender, EventArgs e)
         {
-            cmds.Informe_horario(dgv_informes, dtpinicio, dtpfinal);
+            cmds.Informe_horario(dgv_informes, dtpinicio, dtpfinal, cmbEtapa);
         }
         private void BtnDescargar_Click(object sender, EventArgs e)
         {
@@ -66,6 +68,11 @@ namespace Usuarios_planta.Capa_presentacion
                 MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 file.Close();
             }
+        }
+
+        private void horarios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

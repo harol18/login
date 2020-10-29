@@ -55,7 +55,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(131, 519);
+            this.panelSideMenu.Size = new System.Drawing.Size(131, 564);
             this.panelSideMenu.TabIndex = 0;
             // 
             // BtnReportes
@@ -123,7 +123,7 @@
             this.BtnSalir.IconColor = System.Drawing.Color.Gainsboro;
             this.BtnSalir.IconSize = 29;
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSalir.Location = new System.Drawing.Point(0, 475);
+            this.BtnSalir.Location = new System.Drawing.Point(0, 520);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Padding = new System.Windows.Forms.Padding(1, 0, 20, 0);
             this.BtnSalir.Rotation = 0D;
@@ -164,7 +164,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(131, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(745, 55);
+            this.panelTitulo.Size = new System.Drawing.Size(804, 55);
             this.panelTitulo.TabIndex = 1;
             // 
             // labelInicio
@@ -197,14 +197,14 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(131, 55);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(745, 464);
+            this.panelContenedor.Size = new System.Drawing.Size(804, 509);
             this.panelContenedor.TabIndex = 2;
             // 
             // desembolso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 519);
+            this.ClientSize = new System.Drawing.Size(935, 564);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelSideMenu);

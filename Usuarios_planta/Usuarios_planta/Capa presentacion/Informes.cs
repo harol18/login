@@ -15,7 +15,7 @@ namespace Usuarios_planta.Formularios
     public partial class Informes : Form
     {
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
-        
+
         Comandos cmds = new Comandos();
 
         public Informes()
@@ -32,27 +32,57 @@ namespace Usuarios_planta.Formularios
         {
             if (cmbactividad.Text=="Entrada")
             {
-                cmds.Entrada(Txtidentificacion, TxtNombre, TxtEtapa, lblfecha_actual, lblHora, Txtobservaciones);                
+                cmds.Entrada(Txtidentificacion, TxtNombre, TxtEtapa, lblfecha_actual, lblHora, Txtobservaciones);
+                Txtidentificacion.Clear();
+                TxtNombre.Clear();
+                TxtEtapa.Clear();
+                cmbactividad.Text = "";
+                Txtobservaciones.Clear();
             }
             else if (cmbactividad.Text == "Salida - Break")
             {
                 cmds.Break1(Txtidentificacion, lblfecha_actual, lblHora);
+                Txtidentificacion.Clear();
+                TxtNombre.Clear();
+                TxtEtapa.Clear();
+                cmbactividad.Text = "";
+                Txtobservaciones.Clear();
             }
             else if (cmbactividad.Text == "Entrada - Break")
             {
                 cmds.Break2(Txtidentificacion, lblfecha_actual, lblHora);
+                Txtidentificacion.Clear();
+                TxtNombre.Clear();
+                TxtEtapa.Clear();
+                cmbactividad.Text = "";
+                Txtobservaciones.Clear();
             }
             else if (cmbactividad.Text == "Salida - Almuerzo")
             {
                 cmds.Almuerzo1(Txtidentificacion, lblfecha_actual, lblHora);
+                Txtidentificacion.Clear();
+                TxtNombre.Clear();
+                TxtEtapa.Clear();
+                cmbactividad.Text = "";
+                Txtobservaciones.Clear();
             }
             else if (cmbactividad.Text == "Entrada - Almuerzo")
             {
                 cmds.Almuerzo2(Txtidentificacion, lblfecha_actual, lblHora);
+                Txtidentificacion.Clear();
+                TxtNombre.Clear();
+                TxtEtapa.Clear();
+                cmbactividad.Text = "";
+                Txtobservaciones.Clear();
             }
             else if (cmbactividad.Text == "Salida")
             {
                 cmds.Salida(Txtidentificacion, lblfecha_actual, lblHora);
+                Txtidentificacion.Clear();
+                TxtNombre.Clear();
+                TxtEtapa.Clear();
+                cmbactividad.Text = "";
+                Txtobservaciones.Clear();
             }
         }          
 

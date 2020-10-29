@@ -17,7 +17,7 @@ namespace Usuarios_planta
     class Comandos
     {
         MySqlConnection con = new MySqlConnection("server=;Uid=;password=;database=dblibranza;port=3306;persistsecurityinfo=True;");
-       
+
 
         public void Entrada(TextBox Txtidentificacion, TextBox TxtNombre, TextBox TxtEtapa, Label lblfecha_actual, Label lblHora, TextBox Txtobservaciones)
         {
@@ -183,7 +183,7 @@ namespace Usuarios_planta
             }
         }
 
-        public void Informe_horario(DataGridView dgv_informes, DateTimePicker dtpinicio, DateTimePicker dtpfinal)
+        public void Informe_horario(DataGridView dgv_informes, DateTimePicker dtpinicio, DateTimePicker dtpfinal, ComboBox cmbEtapa)
         {
             try
             {
@@ -193,6 +193,7 @@ namespace Usuarios_planta
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@_fecha_inicio", dtpinicio.Text);
                 cmd.Parameters.AddWithValue("@_fecha_final", dtpfinal.Text);
+                cmd.Parameters.AddWithValue("@_Etapa", cmbEtapa.Text);
                 MySqlDataAdapter registro = new MySqlDataAdapter(cmd);
                 registro.Fill(dt);
                 dgv_informes.DataSource = dt;
